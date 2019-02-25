@@ -1,3 +1,20 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @sarita4 Sign out
+0
+0 0 sarita4/maven-master
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+maven-master/pom.xml
+ade5c87  an hour ago
+@sarita4 sarita4 Update pom.xml
+     
+245 lines (203 sloc)  6.57 KB
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
@@ -158,6 +175,13 @@
           <artifactId>jetty-maven-plugin</artifactId>
           <version>8.0.0.M1</version>
         </plugin>
+               
+        <plugin>
+                  <groupId>org.sonarsource.scanner.maven</groupId>
+                 <artifactId>sonar-maven-plugin</artifactId>
+                  <version>3.6.0.1398</version>
+      </plugin>
+               
       </plugins>
     </pluginManagement>
   </build>
@@ -216,5 +240,22 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
+         
+<profiles>
+         <profile>
+         <id>sonar</id>
+         <activation>
+         <activeByDefault>true</activeByDefault>
+         </activation>
+         <properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+         <sonar.host.url>
+         http://sonarqube.westindia.cloudapp.azure.com:9000/sonarqube
+         </sonar.host.url>
+         <sonar.login>2e3ccef83ab56d29c0f8802d4c1c554645dc037e</sonar.login>
+
+         </properties>
+         </profile>
+         </profiles>
 
 </project>
