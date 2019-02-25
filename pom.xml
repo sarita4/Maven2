@@ -1,20 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @sarita4 Sign out
-0
-0 0 sarita4/maven-master
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-maven-master/pom.xml
-ade5c87  an hour ago
-@sarita4 sarita4 Update pom.xml
-     
-245 lines (203 sloc)  6.57 KB
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
